@@ -1,0 +1,65 @@
+{
+  "restaurant": {
+    "name": "Moe & ❤️",
+    "subtitle": "Unsere Abendkarte"
+  },
+  "categories": [
+    {
+      "id": "hauptgerichte",
+      "name": "Hauptgerichte",
+      "emoji": "🍝",
+      "items": [
+        {
+          "id": "pasta",
+          "name": "Pasta",
+          "description": "Leckere Pasta mit Sauce nach Wahl",
+          "emoji": "🍝"
+        },
+        {
+          "id": "curry",
+          "name": "Curry",
+          "description": "Wärmendes Curry mit Reis",
+          "emoji": "🍛"
+        },
+        {
+          "id": "burger",
+          "name": "Burger",
+          "description": "Burger mit Beilage",
+          "emoji": "🍔"
+        }
+      ]
+    },
+    {
+      "id": "schnell",
+      "name": "Schnell & Einfach",
+      "emoji": "⚡",
+      "items": [
+        {
+          "id": "wraps",
+          "name": "Wraps",
+          "description": "Gefüllte Wraps nach Lust und Laune",
+          "emoji": "🌯"
+        },
+        {
+          "id": "pizza",
+          "name": "Pizza",
+          "description": "Selbstgemacht oder geliefert",
+          "emoji": "🍕"
+        }
+      ]
+    },
+    {
+      "id": "süss",
+      "name": "Etwas Süßes",
+      "emoji": "🍰",
+      "items": [
+        {
+          "id": "pancakes",
+          "name": "Pancakes",
+          "description": "Süße Pancakes",
+          "emoji": "🥞"
+        }
+      ]
+    }
+  ]
+}

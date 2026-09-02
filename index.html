@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <title>Unsere Speisekarte</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <div class="restaurant-icon">🍽️</div>
+
+        <h1 id="restaurant-name">Unsere Speisekarte</h1>
+
+        <p id="restaurant-subtitle">Was gibt's heute?</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="random-section">
+        <h2>Keine Ahnung?</h2>
+
+        <p>Lass das Schicksal entscheiden.</p>
+
+        <button id="random-button" class="random-button">
+          🎲 Überrasch uns!
+        </button>
+      </section>
+
+      <div id="menu">
+        <div class="loading">Speisekarte wird geladen...</div>
+      </div>
+    </main>
+
+    <div id="random-modal" class="modal hidden">
+      <div class="modal-backdrop"></div>
+
+      <div class="modal-content">
+        <div class="modal-emoji" id="random-emoji">🍽️</div>
+
+        <p class="modal-label">Heute gibt es...</p>
+
+        <h2 id="random-name">Pasta</h2>
+
+        <p id="random-description"></p>
+
+        <div class="modal-actions">
+          <button id="again-button">🎲 Nochmal</button>
+
+          <button id="close-modal" class="primary-button">Perfekt!</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

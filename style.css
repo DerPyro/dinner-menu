@@ -1,12 +1,185 @@
+:root {
+  --background: #f5f1ea;
+  --paper: #fffdf8;
+  --text: #2d2926;
+  --muted: #756f68;
+
+  --accent: #8b3f2f;
+  --accent-dark: #6f3024;
+
+  --border: #ded6ca;
+
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: var(--background);
+
+  color: var(--text);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.hero {
+  background: linear-gradient(135deg, #4a2119, #8b3f2f);
+
+  color: white;
+
+  padding: 48px 20px 40px;
+
+  text-align: center;
+
+  border-radius: 0 0 32px 32px;
+}
+
+.hero-content {
+  max-width: 600px;
+
+  margin: auto;
+}
+
+.restaurant-icon {
+  font-size: 3rem;
+
+  margin-bottom: 8px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(2rem, 8vw, 3rem);
+}
+
+.hero p {
+  margin: 8px 0 0;
+
+  opacity: 0.85;
+
+  font-size: 1.1rem;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  max-width: 700px;
+
+  margin: auto;
+
+  padding: 24px 16px 60px;
+}
+
 .filter-section,
 .ingredients-section,
 .suggestions-section {
   margin-top: 40px;
 }
 
+.category {
+  margin-top: 40px;
+}
+
+.category-title,
+.menu-heading {
+  margin-bottom: 16px;
+}
+
 .section-description {
   color: var(--muted);
+
+  margin-bottom: 16px;
 }
+
+/* =========================
+   RANDOM
+========================= */
+
+.random-section {
+  background: var(--paper);
+
+  border: 1px solid var(--border);
+
+  border-radius: 24px;
+
+  padding: 24px;
+
+  text-align: center;
+
+  box-shadow: var(--shadow);
+
+  margin-top: -20px;
+
+  position: relative;
+}
+
+.random-section h2 {
+  margin: 0 0 6px;
+}
+
+.random-section p {
+  margin: 0 0 20px;
+
+  color: var(--muted);
+}
+
+.random-button {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 16px;
+
+  padding: 18px;
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  color: white;
+
+  background: var(--accent);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+
+.random-button:active {
+  transform: scale(0.97);
+
+  background: var(--accent-dark);
+}
+
+/* =========================
+   TAG FILTER
+========================= */
 
 .tag-filters {
   display: flex;
@@ -21,6 +194,8 @@
 
   background: var(--paper);
 
+  color: var(--text);
+
   border-radius: 999px;
 
   padding: 10px 16px;
@@ -28,6 +203,14 @@
   font-size: 0.95rem;
 
   cursor: pointer;
+
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+
+.tag-filter:active {
+  transform: scale(0.95);
 }
 
 .tag-filter.active {
@@ -37,6 +220,10 @@
 
   border-color: var(--accent);
 }
+
+/* =========================
+   INGREDIENTS
+========================= */
 
 .ingredient-list {
   display: grid;
@@ -62,12 +249,28 @@
   padding: 12px;
 
   cursor: pointer;
+
+  min-height: 48px;
 }
 
 .ingredient-checkbox input {
   width: 18px;
 
   height: 18px;
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   MEAL LIST
+========================= */
+
+.menu-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
 }
 
 .meal-card {
@@ -83,8 +286,14 @@
 }
 
 .meal-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
+
+  font-size: 1.2rem;
 }
+
+/* =========================
+   TAGS
+========================= */
 
 .tags {
   display: flex;
@@ -104,26 +313,178 @@
   border-radius: 999px;
 
   font-size: 0.85rem;
+
+  font-weight: 500;
 }
+
+/* =========================
+   INGREDIENT MATCH
+========================= */
 
 .meal-ingredients {
   color: var(--muted);
 
   line-height: 1.5;
+
+  margin: 14px 0 0;
 }
 
 .ingredient-match {
-  margin-top: 12px;
+  margin-top: 14px;
 
   font-weight: 600;
 }
 
 .missing-ingredients {
   color: #9a4a32;
+
+  margin-bottom: 0;
 }
 
 .perfect-match {
   color: #3c7d45;
 
   font-weight: 700;
+
+  margin-bottom: 0;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-backdrop {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 420px;
+
+  background: var(--paper);
+
+  border-radius: 28px;
+
+  padding: 32px 24px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+  animation: modalIn 0.25s ease-out;
+}
+
+@keyframes modalIn {
+  from {
+    transform: scale(0.9) translateY(20px);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+
+    opacity: 1;
+  }
+}
+
+.modal-emoji {
+  font-size: 4rem;
+
+  margin-bottom: 12px;
+}
+
+.modal-label {
+  color: var(--muted);
+
+  margin: 0;
+}
+
+.modal-content h2 {
+  margin: 8px 0 16px;
+
+  font-size: 2rem;
+}
+
+.modal-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+.modal-actions button {
+  flex: 1;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+
+  background: white;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.modal-actions .primary-button {
+  background: var(--accent);
+
+  color: white;
+
+  border: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .container {
+    padding-left: 14px;
+
+    padding-right: 14px;
+  }
+
+  .ingredient-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
 }

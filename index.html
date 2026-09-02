@@ -2,12 +2,10 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
 
-    <title>Unsere Speisekarte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Restaurant BreWo</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -17,13 +15,15 @@
       <div class="hero-content">
         <div class="restaurant-icon">🍽️</div>
 
-        <h1 id="restaurant-name">Unsere Speisekarte</h1>
+        <h1 id="restaurant-name">Restaurant BreWo</h1>
 
-        <p id="restaurant-subtitle">Was gibt's heute?</p>
+        <p id="restaurant-subtitle">Unsere Abendkarte</p>
       </div>
     </header>
 
     <main class="container">
+      <!-- ZUFALL -->
+
       <section class="random-section">
         <h2>Keine Ahnung?</h2>
 
@@ -34,27 +34,63 @@
         </button>
       </section>
 
-      <div id="menu">
-        <div class="loading">Speisekarte wird geladen...</div>
-      </div>
+      <!-- TAGS -->
+
+      <section class="filter-section">
+        <h2>🏷️ Worauf habt ihr Lust?</h2>
+
+        <div id="tag-filters" class="tag-filters"></div>
+      </section>
+
+      <!-- ZUTATEN -->
+
+      <section class="ingredients-section">
+        <h2>🥬 Was haben wir zuhause?</h2>
+
+        <p class="section-description">
+          Wähle alle Zutaten aus, die aktuell vorhanden sind.
+        </p>
+
+        <div id="ingredient-list" class="ingredient-list"></div>
+      </section>
+
+      <!-- VORSCHLÄGE -->
+
+      <section class="suggestions-section">
+        <h2>🍳 Was können wir kochen?</h2>
+
+        <div id="suggestions" class="menu-list"></div>
+      </section>
+
+      <!-- SPEISEKARTE -->
+
+      <section>
+        <h2 class="menu-heading">📖 Unsere Speisekarte</h2>
+
+        <div id="menu"></div>
+      </section>
     </main>
+
+    <!-- RANDOM MODAL -->
 
     <div id="random-modal" class="modal hidden">
       <div class="modal-backdrop"></div>
 
       <div class="modal-content">
-        <div class="modal-emoji" id="random-emoji">🍽️</div>
+        <div id="random-emoji" class="modal-emoji">🎲</div>
 
         <p class="modal-label">Heute gibt es...</p>
 
-        <h2 id="random-name">Pasta</h2>
+        <h2 id="random-name"></h2>
 
-        <p id="random-description"></p>
+        <div id="random-tags" class="tags"></div>
+
+        <div id="random-ingredients"></div>
 
         <div class="modal-actions">
           <button id="again-button">🎲 Nochmal</button>
 
-          <button id="close-modal" class="primary-button">Perfekt!</button>
+          <button id="close-modal" class="primary-button">Klingt gut!</button>
         </div>
       </div>
     </div>

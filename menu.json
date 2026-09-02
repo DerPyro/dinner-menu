@@ -1,65 +1,37 @@
 {
   "restaurant": {
-    "name": "Moe & ❤️",
+    "name": "Restaurant BreWo",
     "subtitle": "Unsere Abendkarte"
   },
-  "categories": [
+
+  "appetizers": [],
+
+  "mainCourse": [
     {
-      "id": "hauptgerichte",
-      "name": "Hauptgerichte",
-      "emoji": "🍝",
-      "items": [
-        {
-          "id": "pasta",
-          "name": "Pasta",
-          "description": "Leckere Pasta mit Sauce nach Wahl",
-          "emoji": "🍝"
-        },
-        {
-          "id": "curry",
-          "name": "Curry",
-          "description": "Wärmendes Curry mit Reis",
-          "emoji": "🍛"
-        },
-        {
-          "id": "burger",
-          "name": "Burger",
-          "description": "Burger mit Beilage",
-          "emoji": "🍔"
-        }
+      "name": "Lasagne",
+      "tags": ["Auflauf", "Tomatig"],
+      "ingredients": ["Pasata", "Hack", "Streukäse", "Creme Vega"]
+    },
+    {
+      "name": "Burger",
+      "tags": ["Soulfood"],
+      "ingredients": [
+        "Bun",
+        "Patty",
+        "Essiggurken",
+        "Avocado",
+        "Salat",
+        "Tomaten"
       ]
     },
     {
-      "id": "schnell",
-      "name": "Schnell & Einfach",
-      "emoji": "⚡",
-      "items": [
-        {
-          "id": "wraps",
-          "name": "Wraps",
-          "description": "Gefüllte Wraps nach Lust und Laune",
-          "emoji": "🌯"
-        },
-        {
-          "id": "pizza",
-          "name": "Pizza",
-          "description": "Selbstgemacht oder geliefert",
-          "emoji": "🍕"
-        }
-      ]
-    },
-    {
-      "id": "süss",
-      "name": "Etwas Süßes",
-      "emoji": "🍰",
-      "items": [
-        {
-          "id": "pancakes",
-          "name": "Pancakes",
-          "description": "Süße Pancakes",
-          "emoji": "🥞"
-        }
-      ]
+      "name": "Flammkuchen",
+      "tags": ["Knusprig"],
+      "ingredients": ["Flammkuchenboden", "Creme Vega", "Räuchertofu", "Lauch"]
     }
-  ]
+  ],
+
+  "dessert": [],
+
+  "drinks": []
 }
